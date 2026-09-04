@@ -103,6 +103,8 @@ p, li { text-wrap: pretty; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  /* For reduced-motion users, never hide content behind the reveal animation. */
+  .reveal { opacity: 1 !important; transform: none !important; }
 }
 
 /* Visually hidden, but available to screen readers */
