@@ -27,7 +27,11 @@ jobs:
       - name: Stage site files
         run: |
           mkdir -p _site
-          cp -r index.html css js _site/
+          cp -r index.html css js assets _site/ 2>/dev/null || true
+          # Copy static assets that exist (resume PDF, etc.)
+          for f in *.pdf *.png *.ico; do
+            [ -f "$f" ] && cp "$f" _site/
+          done
           # Activate the CNAME only once a real custom domain replaces the placeholder.
           # This keeps the default <user>.github.io URL live until a domain is configured.
           if [ -f CNAME ] && ! grep -qi "your-custom-domain.com" CNAME; then
