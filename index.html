@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Morgan — Software Engineer</title>
+  <meta name="description" content="Alex Morgan is a senior software engineer specializing in distributed systems, developer tooling, and platform infrastructure." />
+  <meta property="og:title" content="Alex Morgan — Software Engineer" />
+  <meta property="og:description" content="Senior software engineer specializing in distributed systems, developer tooling, and platform infrastructure." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230d3b3f'/><path d='M9 23V9h3.2l7.1 9.2V9H22v14h-3.2l-7.1-9.2V23H9z' fill='%23f7f6f2'/></svg>" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Alex Morgan home">
+        <svg class="brand__mark" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="7" fill="currentColor" />
+          <path d="M9 23V9h3.2l7.1 9.2V9H22v14h-3.2l-7.1-9.2V23H9z" fill="var(--color-bg)" />
+        </svg>
+        <span class="brand__name">Alex Morgan</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <ul role="list" class="nav__list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact" class="nav__cta">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <span id="top" aria-hidden="true"></span>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <p class="hero__eyebrow">Senior Software Engineer · San Francisco, CA</p>
+        <h1 class="hero__title">Building resilient systems that <em>scale quietly.</em></h1>
+        <p class="hero__lede">
+          I design and ship distributed infrastructure, developer tooling, and
+          platform services that handle millions of requests without breaking a sweat —
+          and that engineers actually enjoy using.
+        </p>
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn--primary">Get in touch</a>
+          <a href="Alex-Morgan-Resume.pdf" class="btn btn--ghost" download>Download résumé</a>
+        </div>
+        <ul role="list" class="hero__meta">
+          <li><span class="meta-num">9+</span> years building software</li>
+          <li><span class="meta-num">40+</span> services shipped to production</li>
+          <li><span class="meta-num">99.99%</span> uptime maintained</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container about">
+        <header class="section__head">
+          <p class="section__kicker">About</p>
+          <h2 class="section__title">Engineering with empathy for the next maintainer.</h2>
+        </header>
+        <div class="about__body">
+          <p>
+            I'm a senior software engineer focused on the unglamorous work that keeps
+            products fast and teams calm: distributed systems, observability, internal
+            platforms, and the developer experience around them. Over the last decade
+            I've led infrastructure that grew from a single region to a global footprint
+            serving tens of millions of users.
+          </p>
+          <p>
+            My approach is simple — measure first, build small, ship often, and document
+            relentlessly. I care about code that reads like it was written for a person,
+            not a compiler. When I'm not on call, I write about systems design, mentor
+            early-career engineers, and tinker with home-lab hardware.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section section--offset">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker">Experience</p>
+          <h2 class="section__title">Where I've made an impact.</h2>
+        </header>
+
+        <ol role="list" class="timeline">
+          <li class="timeline__item">
+            <div class="timeline__period">2022 — Present</div>
+            <div class="timeline__content">
+              <h3 class="timeline__role">Staff Software Engineer · Platform Infrastructure</h3>
+              <p class="timeline__org">Nimbus Cloud Systems</p>
+              <p class="timeline__desc">
+                Lead the platform team owning service deployment, autoscaling, and the
+                internal developer portal. Drove a migration to cell-based architecture
+                that cut blast-radius incidents by 70% and reduced p99 latency by 38%.
+              </p>
+              <ul role="list" class="tags">
+                <li>Go</li><li>Kubernetes</li><li>gRPC</li><li>Terraform</li><li>Cell architecture</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__period">2019 — 2022</div>
+            <div class="timeline__content">
+              <h3 class="timeline__role">Senior Software Engineer · Distributed Systems</h3>
+              <p class="timeline__org">Helio Analytics</p>
+              <p class="timeline__desc">
+                Designed the streaming ingestion pipeline powering real-time dashboards for
+                2,000+ enterprise customers. Built a backpressure-aware event router
+                handling 1.2M events/sec at peak with exactly-once semantics.
+              </p>
+              <ul role="list" class="tags">
+                <li>Rust</li><li>Kafka</li><li>Apache Flink</li><li>PostgreSQL</li><li>Exactly-once</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__period">2017 — 2019</div>
+            <div class="timeline__content">
+              <h3 class="timeline__role">Software Engineer · Backend Services</h3>
+              <p class="timeline__org">Beacon Labs</p>
+              <p class="timeline__desc">
+                Built the core billing and identity services from the ground up. Introduced
+                the team's first structured observability stack, dropping mean-time-to-detect
+                from 45 minutes to under 4.
+              </p>
+              <ul role="list" class="tags">
+                <li>Python</li><li>PostgreSQL</li><li>Redis</li><li>OpenTelemetry</li><li>Stripe</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker">Selected Work</p>
+          <h2 class="section__title">A few things I've built.</h2>
+        </header>
+
+        <div class="projects">
+          <article class="project">
+            <h3 class="project__title">Cellbus</h3>
+            <p class="project__desc">
+              An open-source library for routing traffic across cell-based deployments with
+              automatic failover and weighted load distribution. 3.4k GitHub stars.
+            </p>
+            <ul role="list" class="tags">
+              <li>Go</li><li>Service mesh</li><li>Open source</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <h3 class="project__title">Telemetry Garden</h3>
+            <p class="project__desc">
+              A self-hostable, drop-in observability dashboard that unifies metrics, logs,
+              and traces behind a single query language. Used internally across three teams.
+            </p>
+            <ul role="list" class="tags">
+              <li>Rust</li><li>ClickHouse</li><li>OpenTelemetry</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <h3 class="project__title">Scalecheck</h3>
+            <p class="project__desc">
+              A load-testing harness that replays production traffic shapes against staging,
+              catching capacity regressions before they reach customers.
+            </p>
+            <ul role="list" class="tags">
+              <li>Kotlin</li><li>Gatling</li><li>Chaos engineering</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section section--offset">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker">Skills</p>
+          <h2 class="section__title">Tools of the trade.</h2>
+        </header>
+
+        <div class="skills">
+          <div class="skill-group">
+            <h3 class="skill-group__title">Languages</h3>
+            <ul role="list" class="tags tags--lg">
+              <li>Go</li><li>Rust</li><li>Python</li><li>Kotlin</li><li>TypeScript</li><li>SQL</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__title">Infrastructure</h3>
+            <ul role="list" class="tags tags--lg">
+              <li>Kubernetes</li><li>Terraform</li><li>AWS</li><li>GCP</li><li>Cell architecture</li><li>Service mesh</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__title">Data & Streaming</h3>
+            <ul role="list" class="tags tags--lg">
+              <li>Kafka</li><li>Apache Flink</li><li>PostgreSQL</li><li>ClickHouse</li><li>Redis</li><li>Distributed queues</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__title">Practices</h3>
+            <ul role="list" class="tags tags--lg">
+              <li>Distributed systems design</li><li>Observability</li><li>SRE & on-call</li><li>Tech leadership</li><li>Mentorship</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker">Education</p>
+          <h2 class="section__title">Foundation.</h2>
+        </header>
+        <div class="edu">
+          <div class="edu__item">
+            <h3 class="edu__degree">B.S. in Computer Science</h3>
+            <p class="edu__school">University of Washington — Seattle</p>
+            <p class="edu__notes">Graduated with honors · Focus on distributed systems and operating systems.</p>
+          </div>
+          <div class="edu__item">
+            <h3 class="edu__degree">Certifications</h3>
+            <p class="edu__school">AWS Solutions Architect (Professional) · CKA · HashiCorp Terraform Associate</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section--cta">
+      <div class="container contact">
+        <p class="section__kicker">Contact</p>
+        <h2 class="contact__title">Let's build something reliable.</h2>
+        <p class="contact__lede">
+          Open to senior staff and principal engineering roles, advisory work, and interesting
+          infrastructure problems. The fastest way to reach me is email.
+        </p>
+        <div class="contact__links">
+          <a class="contact__link" href="mailto:alex@example.com">
+            <span class="contact__icon" aria-hidden="true">✉</span>
+            <span>alex@example.com</span>
+          </a>
+          <a class="contact__link" href="https://github.com/connectors-testing-pplx">
+            <span class="contact__icon" aria-hidden="true">⌥</span>
+            <span>github.com/connectors-testing-pplx</span>
+          </a>
+          <a class="contact__link" href="https://www.linkedin.com/in/alexmorgan">
+            <span class="contact__icon" aria-hidden="true">in</span>
+            <span>linkedin.com/in/alexmorgan</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">© <span id="year">2026</span> Alex Morgan. All rights reserved.</p>
+      <p class="footer__built">Built with semantic HTML, hand-written CSS, and no frameworks.</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
