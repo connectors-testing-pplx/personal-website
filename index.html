@@ -1,293 +1,284 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="light" data-lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alex Morgan — Software Engineer</title>
-  <meta name="description" content="Alex Morgan is a senior software engineer specializing in distributed systems, developer tooling, and platform infrastructure." />
-  <meta property="og:title" content="Alex Morgan — Software Engineer" />
-  <meta property="og:description" content="Senior software engineer specializing in distributed systems, developer tooling, and platform infrastructure." />
+  <title data-i18n="meta.title">Arnoldo Alonso — Neurointelligent Systems Architect</title>
+  <meta name="description" data-i18n="meta.description" content="Arnoldo Alonso is a U.S. Army combat veteran, former Deputy Sheriff, and neurointelligent-systems architect focused on sovereign, ethical, and accessibility-first technology." />
+  <meta name="author" content="Arnoldo Alonso" />
+  <meta property="og:title" data-i18n="meta.title" content="Arnoldo Alonso — Neurointelligent Systems Architect" />
+  <meta property="og:description" data-i18n="meta.description" content="U.S. Army combat veteran, former Deputy Sheriff, and neurointelligent-systems architect focused on sovereign, ethical, and accessibility-first technology." />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#0d3b3f" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#14130f" media="(prefers-color-scheme: dark)" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230d3b3f'/><path d='M9 23V9h3.2l7.1 9.2V9H22v14h-3.2l-7.1-9.2V23H9z' fill='%23f7f6f2'/></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230d3b3f'/><text x='16' y='23' font-family='Inter,sans-serif' font-size='18' font-weight='700' text-anchor='middle' fill='%23f7f6f2'>A</text></svg>" />
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
 
   <header class="header" id="header">
     <div class="container header__inner">
-      <a class="brand" href="#top" aria-label="Alex Morgan home">
+      <a class="brand" href="#top" aria-label="Arnoldo Alonso — home">
         <svg class="brand__mark" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true">
           <rect width="32" height="32" rx="7" fill="currentColor" />
-          <path d="M9 23V9h3.2l7.1 9.2V9H22v14h-3.2l-7.1-9.2V23H9z" fill="var(--color-bg)" />
+          <text x="16" y="23" font-family="Inter, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="var(--color-bg)">A</text>
         </svg>
-        <span class="brand__name">Alex Morgan</span>
+        <span class="brand__name">Arnoldo Alonso</span>
       </a>
       <nav class="nav" aria-label="Primary">
         <ul role="list" class="nav__list">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact" class="nav__cta">Contact</a></li>
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#mission" data-i18n="nav.mission">Mission</a></li>
+          <li><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
+          <li><a href="#principles" data-i18n="nav.principles">Principles</a></li>
+          <li><a href="#contact" class="nav__cta" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
-      <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
+      <div class="header__controls">
+        <button class="lang-toggle" data-lang-toggle aria-label="Switch language to Spanish" aria-pressed="false">
+          <span aria-hidden="true">EN</span>
+          <span class="sr-only">/</span>
+          <span class="lang-toggle__alt" aria-hidden="true">ES</span>
+        </button>
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
     </div>
   </header>
 
   <main id="main">
-    <span id="top" aria-hidden="true"></span>
+    <span id="top" aria-hidden="true" tabindex="-1"></span>
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="container hero__inner">
-        <p class="hero__eyebrow">Senior Software Engineer · San Francisco, CA</p>
-        <h1 class="hero__title">Building resilient systems that <em>scale quietly.</em></h1>
-        <p class="hero__lede">
-          I design and ship distributed infrastructure, developer tooling, and
-          platform services that handle millions of requests without breaking a sweat —
-          and that engineers actually enjoy using.
+        <p class="hero__eyebrow" data-i18n="hero.eyebrow">U.S. Army Combat Veteran · Neurointelligent-Systems Architect</p>
+        <h1 class="hero__title" id="hero-title">
+          <span data-i18n="hero.title.pre">Technology that </span><em data-i18n="hero.title.em">protects, endures, and serves.</em>
+        </h1>
+        <p class="hero__lede" data-i18n="hero.lede">
+          I design sovereign, ethical, and constraint-aligned systems for defense, governance,
+          and disability justice — built to operate under duress, without cloud dependency, and
+          with verifiable ethical boundaries.
         </p>
         <div class="hero__actions">
-          <a href="#contact" class="btn btn--primary">Get in touch</a>
-          <a href="Alex-Morgan-Resume.pdf" class="btn btn--ghost" download>Download résumé</a>
+          <a href="#contact" class="btn btn--primary" data-i18n="hero.cta.contact">Get in touch</a>
+          <a href="#portfolio" class="btn btn--ghost" data-i18n="hero.cta.work">View my work</a>
         </div>
-        <ul role="list" class="hero__meta">
-          <li><span class="meta-num">9+</span> years building software</li>
-          <li><span class="meta-num">40+</span> services shipped to production</li>
-          <li><span class="meta-num">99.99%</span> uptime maintained</li>
-        </ul>
+        <dl class="hero__meta">
+          <div>
+            <dt class="meta-num" data-i18n="hero.meta1.label">Veteran-led</dt>
+            <dd data-i18n="hero.meta1.value">Army combat veteran & former Deputy Sheriff</dd>
+          </div>
+          <div>
+            <dt class="meta-num" data-i18n="hero.meta2.label">Accessibility-first</dt>
+            <dd data-i18n="hero.meta2.value">Built for visually & cognitively impaired users</dd>
+          </div>
+          <div>
+            <dt class="meta-num" data-i18n="hero.meta3.label">Offline-autonomous</dt>
+            <dd data-i18n="hero.meta3.value">No cloud dependency, stable under pressure</dd>
+          </div>
+        </dl>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section">
+    <section id="about" class="section" aria-labelledby="about-title">
       <div class="container about">
         <header class="section__head">
-          <p class="section__kicker">About</p>
-          <h2 class="section__title">Engineering with empathy for the next maintainer.</h2>
+          <p class="section__kicker" data-i18n="about.kicker">About</p>
+          <h2 class="section__title" id="about-title" data-i18n="about.title">Engineering with ethics, under constraint.</h2>
         </header>
         <div class="about__body">
-          <p>
-            I'm a senior software engineer focused on the unglamorous work that keeps
-            products fast and teams calm: distributed systems, observability, internal
-            platforms, and the developer experience around them. Over the last decade
-            I've led infrastructure that grew from a single region to a global footprint
-            serving tens of millions of users.
+          <p data-i18n="about.p1">
+            I am a U.S. Army combat veteran, former Deputy Sheriff, and neurointelligent-systems
+            architect focused on sovereign, ethical, and constraint-aligned technology. My work
+            centers on neuromorphic computing, offline autonomy, and accessibility engineering for
+            visually and cognitively impaired users. I design systems that operate under duress,
+            without cloud dependency, and with verifiable ethical boundaries for defense,
+            governance, and disability justice.
           </p>
-          <p>
-            My approach is simple — measure first, build small, ship often, and document
-            relentlessly. I care about code that reads like it was written for a person,
-            not a compiler. When I'm not on call, I write about systems design, mentor
-            early-career engineers, and tinker with home-lab hardware.
+          <p data-i18n="about.p2">
+            I specialize in building high-assurance systems that remain stable under pressure and
+            resilient in adversarial or resource-limited conditions. Every project is grounded in
+            real-world constraints rather than theoretical idealism, and engineered to be durable,
+            accessible, and aligned with the ethical responsibilities of public service.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section section--offset">
+    <!-- MISSION -->
+    <section id="mission" class="section section--offset" aria-labelledby="mission-title">
       <div class="container">
         <header class="section__head">
-          <p class="section__kicker">Experience</p>
-          <h2 class="section__title">Where I've made an impact.</h2>
+          <p class="section__kicker" data-i18n="mission.kicker">Mission</p>
+          <h2 class="section__title" id="mission-title" data-i18n="mission.title">Protect, strengthen, and restore.</h2>
         </header>
-
-        <ol role="list" class="timeline">
-          <li class="timeline__item">
-            <div class="timeline__period">2022 — Present</div>
-            <div class="timeline__content">
-              <h3 class="timeline__role">Staff Software Engineer · Platform Infrastructure</h3>
-              <p class="timeline__org">Nimbus Cloud Systems</p>
-              <p class="timeline__desc">
-                Lead the platform team owning service deployment, autoscaling, and the
-                internal developer portal. Drove a migration to cell-based architecture
-                that cut blast-radius incidents by 70% and reduced p99 latency by 38%.
-              </p>
-              <ul role="list" class="tags">
-                <li>Go</li><li>Kubernetes</li><li>gRPC</li><li>Terraform</li><li>Cell architecture</li>
-              </ul>
-            </div>
+        <ul role="list" class="mission-list">
+          <li class="mission-list__item">
+            <h3 data-i18n="mission.item1.h">Protect disabled veterans</h3>
+            <p data-i18n="mission.item1.p">Build technology that defends the people who served, with accessibility and dignity at the core.</p>
           </li>
-
-          <li class="timeline__item">
-            <div class="timeline__period">2019 — 2022</div>
-            <div class="timeline__content">
-              <h3 class="timeline__role">Senior Software Engineer · Distributed Systems</h3>
-              <p class="timeline__org">Helio Analytics</p>
-              <p class="timeline__desc">
-                Designed the streaming ingestion pipeline powering real-time dashboards for
-                2,000+ enterprise customers. Built a backpressure-aware event router
-                handling 1.2M events/sec at peak with exactly-once semantics.
-              </p>
-              <ul role="list" class="tags">
-                <li>Rust</li><li>Kafka</li><li>Apache Flink</li><li>PostgreSQL</li><li>Exactly-once</li>
-              </ul>
-            </div>
+          <li class="mission-list__item">
+            <h3 data-i18n="mission.item2.h">Strengthen working families</h3>
+            <p data-i18n="mission.item2.p">Create durable, replicable systems that support the communities most often excluded from advanced technology.</p>
           </li>
-
-          <li class="timeline__item">
-            <div class="timeline__period">2017 — 2019</div>
-            <div class="timeline__content">
-              <h3 class="timeline__role">Software Engineer · Backend Services</h3>
-              <p class="timeline__org">Beacon Labs</p>
-              <p class="timeline__desc">
-                Built the core billing and identity services from the ground up. Introduced
-                the team's first structured observability stack, dropping mean-time-to-detect
-                from 45 minutes to under 4.
-              </p>
-              <ul role="list" class="tags">
-                <li>Python</li><li>PostgreSQL</li><li>Redis</li><li>OpenTelemetry</li><li>Stripe</li>
-              </ul>
-            </div>
+          <li class="mission-list__item">
+            <h3 data-i18n="mission.item3.h">Restore technological sovereignty</h3>
+            <p data-i18n="mission.item3.p">Return control to communities through auditable, offline-capable, constraint-aligned engineering.</p>
           </li>
-        </ol>
+        </ul>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section" aria-labelledby="portfolio-title">
       <div class="container">
         <header class="section__head">
-          <p class="section__kicker">Selected Work</p>
-          <h2 class="section__title">A few things I've built.</h2>
+          <p class="section__kicker" data-i18n="portfolio.kicker">Engineering Portfolio</p>
+          <h2 class="section__title" id="portfolio-title" data-i18n="portfolio.title">Systems built to endure.</h2>
         </header>
 
         <div class="projects">
           <article class="project">
-            <h3 class="project__title">Cellbus</h3>
-            <p class="project__desc">
-              An open-source library for routing traffic across cell-based deployments with
-              automatic failover and weighted load distribution. 3.4k GitHub stars.
+            <h3 class="project__title">Ayala</h3>
+            <p class="project__tag" data-i18n="portfolio.ayala.tag">Patented neurointelligent claims-preparation engine</p>
+            <p class="project__desc" data-i18n="portfolio.ayala.desc">
+              A patented neurointelligent claims-preparation engine designed to function in degraded
+              environments and support disabled users through transparency, constraint, and
+              measurable accountability.
             </p>
             <ul role="list" class="tags">
-              <li>Go</li><li>Service mesh</li><li>Open source</li>
+              <li data-i18n="portfolio.ayala.t1">Neurointelligent</li>
+              <li data-i18n="portfolio.ayala.t2">Claims automation</li>
+              <li data-i18n="portfolio.ayala.t3">Accessibility-first</li>
             </ul>
           </article>
 
           <article class="project">
-            <h3 class="project__title">Telemetry Garden</h3>
-            <p class="project__desc">
-              A self-hostable, drop-in observability dashboard that unifies metrics, logs,
-              and traces behind a single query language. Used internally across three teams.
+            <h3 class="project__title" data-i18n="portfolio.ethical.title">Ethical Command Architecture</h3>
+            <p class="project__tag" data-i18n="portfolio.ethical.tag">Sovereign intelligence</p>
+            <p class="project__desc" data-i18n="portfolio.ethical.desc">
+              Unnamed architectures focused on ethical command and sovereign intelligence — built
+              to reinforce institutional integrity through verifiable ethical boundaries.
             </p>
             <ul role="list" class="tags">
-              <li>Rust</li><li>ClickHouse</li><li>OpenTelemetry</li>
+              <li data-i18n="portfolio.ethical.t1">Ethical command</li>
+              <li data-i18n="portfolio.ethical.t2">Sovereign intelligence</li>
+              <li data-i18n="portfolio.ethical.t3">Verifiable boundaries</li>
             </ul>
           </article>
 
           <article class="project">
-            <h3 class="project__title">Scalecheck</h3>
-            <p class="project__desc">
-              A load-testing harness that replays production traffic shapes against staging,
-              catching capacity regressions before they reach customers.
+            <h3 class="project__title" data-i18n="portfolio.dual.title">Dual-Use Manufacturing</h3>
+            <p class="project__tag" data-i18n="portfolio.dual.tag">Resilient production</p>
+            <p class="project__desc" data-i18n="portfolio.dual.desc">
+              Systems designed for dual-use manufacturing that operate in degraded environments and
+              remain stable under pressure and resilient in resource-limited conditions.
             </p>
             <ul role="list" class="tags">
-              <li>Kotlin</li><li>Gatling</li><li>Chaos engineering</li>
+              <li data-i18n="portfolio.dual.t1">Dual-use</li>
+              <li data-i18n="portfolio.dual.t2">Degraded environments</li>
+              <li data-i18n="portfolio.dual.t3">Resilient</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="section section--offset">
+    <!-- PRINCIPLES -->
+    <section id="principles" class="section section--offset" aria-labelledby="principles-title">
       <div class="container">
         <header class="section__head">
-          <p class="section__kicker">Skills</p>
-          <h2 class="section__title">Tools of the trade.</h2>
+          <p class="section__kicker" data-i18n="principles.kicker">Principles</p>
+          <h2 class="section__title" id="principles-title" data-i18n="principles.title">What every build is measured against.</h2>
         </header>
 
         <div class="skills">
           <div class="skill-group">
-            <h3 class="skill-group__title">Languages</h3>
+            <h3 class="skill-group__title" data-i18n="principles.g1">Engineering Disciplines</h3>
             <ul role="list" class="tags tags--lg">
-              <li>Go</li><li>Rust</li><li>Python</li><li>Kotlin</li><li>TypeScript</li><li>SQL</li>
+              <li data-i18n="principles.g1.i1">Neuromorphic computing</li>
+              <li data-i18n="principles.g1.i2">Offline autonomy</li>
+              <li data-i18n="principles.g1.i3">Accessibility engineering</li>
+              <li data-i18n="principles.g1.i4">High-assurance systems</li>
             </ul>
           </div>
           <div class="skill-group">
-            <h3 class="skill-group__title">Infrastructure</h3>
+            <h3 class="skill-group__title" data-i18n="principles.g2">Operating Conditions</h3>
             <ul role="list" class="tags tags--lg">
-              <li>Kubernetes</li><li>Terraform</li><li>AWS</li><li>GCP</li><li>Cell architecture</li><li>Service mesh</li>
+              <li data-i18n="principles.g2.i1">Degraded environments</li>
+              <li data-i18n="principles.g2.i2">No cloud dependency</li>
+              <li data-i18n="principles.g2.i3">Adversarial resilience</li>
+              <li data-i18n="principles.g2.i4">Resource-limited</li>
             </ul>
           </div>
           <div class="skill-group">
-            <h3 class="skill-group__title">Data & Streaming</h3>
+            <h3 class="skill-group__title" data-i18n="principles.g3">Accountability</h3>
             <ul role="list" class="tags tags--lg">
-              <li>Kafka</li><li>Apache Flink</li><li>PostgreSQL</li><li>ClickHouse</li><li>Redis</li><li>Distributed queues</li>
+              <li data-i18n="principles.g3.i1">Replicable</li>
+              <li data-i18n="principles.g3.i2">Auditable</li>
+              <li data-i18n="principles.g3.i3">Verifiable ethical boundaries</li>
+              <li data-i18n="principles.g3.i4">Measurable accountability</li>
             </ul>
           </div>
           <div class="skill-group">
-            <h3 class="skill-group__title">Practices</h3>
+            <h3 class="skill-group__title" data-i18n="principles.g4">Sectors</h3>
             <ul role="list" class="tags tags--lg">
-              <li>Distributed systems design</li><li>Observability</li><li>SRE & on-call</li><li>Tech leadership</li><li>Mentorship</li>
+              <li data-i18n="principles.g4.i1">Defense</li>
+              <li data-i18n="principles.g4.i2">Governance</li>
+              <li data-i18n="principles.g4.i3">Disability justice</li>
+              <li data-i18n="principles.g4.i4">Public service</li>
             </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section id="education" class="section">
-      <div class="container">
-        <header class="section__head">
-          <p class="section__kicker">Education</p>
-          <h2 class="section__title">Foundation.</h2>
-        </header>
-        <div class="edu">
-          <div class="edu__item">
-            <h3 class="edu__degree">B.S. in Computer Science</h3>
-            <p class="edu__school">University of Washington — Seattle</p>
-            <p class="edu__notes">Graduated with honors · Focus on distributed systems and operating systems.</p>
-          </div>
-          <div class="edu__item">
-            <h3 class="edu__degree">Certifications</h3>
-            <p class="edu__school">AWS Solutions Architect (Professional) · CKA · HashiCorp Terraform Associate</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section section--cta">
+    <section id="contact" class="section section--cta" aria-labelledby="contact-title">
       <div class="container contact">
-        <p class="section__kicker">Contact</p>
-        <h2 class="contact__title">Let's build something reliable.</h2>
-        <p class="contact__lede">
-          Open to senior staff and principal engineering roles, advisory work, and interesting
-          infrastructure problems. The fastest way to reach me is email.
+        <p class="section__kicker" data-i18n="contact.kicker">Contact</p>
+        <h2 class="contact__title" id="contact-title" data-i18n="contact.title">Let's build something durable.</h2>
+        <p class="contact__lede" data-i18n="contact.lede">
+          Open to defense, governance, and disability-justice collaborations. The most accessible
+          way to reach me is Telegram.
         </p>
         <div class="contact__links">
-          <a class="contact__link" href="mailto:alex@example.com">
-            <span class="contact__icon" aria-hidden="true">✉</span>
-            <span>alex@example.com</span>
+          <a class="contact__link" href="https://t.me/alonsobrx">
+            <span class="contact__icon" aria-hidden="true">✈</span>
+            <span data-i18n="contact.telegram">Telegram — t.me/alonsobrx</span>
           </a>
           <a class="contact__link" href="https://github.com/connectors-testing-pplx">
             <span class="contact__icon" aria-hidden="true">⌥</span>
             <span>github.com/connectors-testing-pplx</span>
           </a>
-          <a class="contact__link" href="https://www.linkedin.com/in/alexmorgan">
-            <span class="contact__icon" aria-hidden="true">in</span>
-            <span>linkedin.com/in/alexmorgan</span>
-          </a>
         </div>
+        <p class="contact__a11y-note" data-i18n="contact.a11y">
+          This site is designed to be fully usable with a screen reader and keyboard only.
+          Press Tab to navigate; headings and landmarks structure every page.
+        </p>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p class="footer__copy">© <span id="year">2026</span> Alex Morgan. All rights reserved.</p>
-      <p class="footer__built">Built with semantic HTML, hand-written CSS, and no frameworks.</p>
+      <p class="footer__copy">© <span id="year">2026</span> Arnoldo Alonso. <span data-i18n="footer.rights">All rights reserved.</span></p>
+      <p class="footer__built" data-i18n="footer.built">Built with semantic HTML, hand-written CSS, and a screen-reader-first commitment.</p>
     </div>
   </footer>
 
+  <script src="js/i18n.js" defer></script>
   <script src="js/app.js" defer></script>
 </body>
 </html>

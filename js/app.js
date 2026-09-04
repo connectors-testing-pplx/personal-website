@@ -11,7 +11,11 @@
   var moonSVG = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
 
   function render() {
-    toggle.setAttribute('aria-label', 'Switch to ' + (theme === 'dark' ? 'light' : 'dark') + ' mode');
+    var next = theme === 'dark' ? 'light' : 'dark';
+    var label = (window.__aa_i18n && window.__aa_i18n.strings) ?
+      window.__aa_i18n.strings[document.documentElement.getAttribute('data-lang') || 'en'][theme === 'dark' ? 'theme.toLight' : 'theme.toDark'] :
+      'Switch to ' + next + ' mode';
+    toggle.setAttribute('aria-label', label);
     toggle.innerHTML = theme === 'dark' ? sunSVG : moonSVG;
   }
   render();
