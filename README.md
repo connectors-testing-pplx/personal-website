@@ -1,6 +1,6 @@
 # Arnoldo Alonso — Personal Website
 
-A fast, **screen-reader-first**, **bilingual (English / Español)** personal website for Arnoldo Alonso — U.S. Army combat veteran, former Deputy Sheriff, and neurointelligent-systems architect. Built with semantic HTML, hand-written CSS, and zero frameworks. Deployed to GitHub Pages with an automated CI/CD pipeline.
+A fast, **screen-reader-first**, **bilingual (English / Español)** personal résumé website for Arnoldo Alonso — U.S. Army combat veteran, former Deputy Sheriff, and neurointelligent-systems architect. Built with semantic HTML, hand-written CSS, and zero frameworks. Deployed to GitHub Pages with an automated CI/CD pipeline.
 
 **Live site:** <https://connectors-testing-pplx.github.io/personal-website/>
 
@@ -35,7 +35,12 @@ This site is engineered to be inclusive to **blind and low-vision users** and to
 
 ## Features
 
-- Single-page profile: hero, about, mission, engineering portfolio, principles, and contact
+- Single-page résumé: hero, about, career timeline, engineering portfolio, mission, principles, credentials, schedule, and contact
+- Career timeline tracing Army → law enforcement → neurointelligent-systems architecture
+- Credentials section (U.S. patent, military & civilian service)
+- Section numbering (01–08) for editorial structure
+- Custom inline SVG logo mark and decorative hero motif
+- Print / save-as-PDF stylesheet with a one-click print button in the hero and contact sections
 - Light / dark mode with system-preference detection and manual toggle (label is bilingual)
 - English / Spanish language toggle with browser-language detection and persistence
 - Fully responsive, mobile-first layout
@@ -91,9 +96,9 @@ All user-facing strings live in the `STRINGS` dictionary inside `js/i18n.js`, ke
 ```
 .
 ├── index.html              # Single-page site (semantic, bilingual-ready markup)
-├── css/style.css           # Design tokens, accessibility styles, all layout
+├── css/style.css           # Design tokens, accessibility styles, all layout, print stylesheet
 ├── js/i18n.js              # English / Spanish translation system + language toggle
-├── js/app.js               # Theme toggle (bilingual labels), scroll header, reveal
+├── js/app.js               # Theme toggle (bilingual labels), scroll header, reveal, print buttons
 ├── CNAME                   # Custom domain (placeholder by default)
 ├── .github/workflows/
 │   └── deploy.yml          # Automated GitHub Pages deployment

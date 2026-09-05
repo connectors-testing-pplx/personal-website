@@ -57,5 +57,12 @@
   els.forEach(function (el) { io.observe(el); });
 })();
 
+// Print buttons (hero + contact) — open the browser print dialog
+(function () {
+  document.querySelectorAll('[data-print]').forEach(function (btn) {
+    btn.addEventListener('click', function () { window.print(); });
+  });
+})();
+
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();

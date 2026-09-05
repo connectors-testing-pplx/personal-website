@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230d3b3f'/><text x='16' y='23' font-family='Inter,sans-serif' font-size='18' font-weight='700' text-anchor='middle' fill='%23f7f6f2'>A</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230d3b3f'/><g fill='none' stroke='%23f7f6f2' stroke-width='2' stroke-linecap='round'><circle cx='16' cy='9' r='2.4'/><circle cx='8' cy='22' r='2.4'/><circle cx='24' cy='22' r='2.4'/><path d='M16 11.4L9.4 19.7M16 11.4l6.6 8.3M10.3 22h11.4'/></g></svg>" />
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
@@ -26,16 +26,21 @@
   <header class="header" id="header">
     <div class="container header__inner">
       <a class="brand" href="#top" aria-label="Arnoldo Alonso — home">
-        <svg class="brand__mark" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true">
+        <svg class="brand__mark" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
           <rect width="32" height="32" rx="7" fill="currentColor" />
-          <text x="16" y="23" font-family="Inter, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="var(--color-bg)">A</text>
+          <g fill="none" stroke="var(--color-bg)" stroke-width="2" stroke-linecap="round">
+            <circle cx="16" cy="9" r="2.4" />
+            <circle cx="8" cy="22" r="2.4" />
+            <circle cx="24" cy="22" r="2.4" />
+            <path d="M16 11.4L9.4 19.7M16 11.4l6.6 8.3M10.3 22h11.4" />
+          </g>
         </svg>
         <span class="brand__name">Arnoldo Alonso</span>
       </a>
       <nav class="nav" aria-label="Primary">
         <ul role="list" class="nav__list">
           <li><a href="#about" data-i18n="nav.about">About</a></li>
-          <li><a href="#mission" data-i18n="nav.mission">Mission</a></li>
+          <li><a href="#career" data-i18n="nav.career">Career</a></li>
           <li><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
           <li><a href="#principles" data-i18n="nav.principles">Principles</a></li>
           <li><a href="#schedule" data-i18n="nav.schedule">Schedule</a></li>
@@ -60,6 +65,27 @@
 
     <!-- HERO -->
     <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__motif" aria-hidden="true">
+        <svg viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g stroke="currentColor" stroke-width="1.4" opacity="0.55">
+            <circle cx="260" cy="260" r="240" opacity="0.5" />
+            <circle cx="260" cy="260" r="170" opacity="0.6" />
+            <circle cx="260" cy="260" r="104" opacity="0.7" />
+            <circle cx="260" cy="260" r="44" opacity="0.9" />
+          </g>
+          <g fill="currentColor">
+            <circle cx="260" cy="260" r="5" />
+            <circle cx="260" cy="116" r="4" />
+            <circle cx="385" cy="332" r="4" />
+            <circle cx="135" cy="332" r="4" />
+            <circle cx="364" cy="156" r="3" opacity="0.7" />
+            <circle cx="156" cy="156" r="3" opacity="0.7" />
+          </g>
+          <g stroke="currentColor" stroke-width="1.2" opacity="0.45" stroke-linecap="round">
+            <path d="M260 260L260 116M260 260L385 332M260 260L135 332M260 260L364 156M260 260L156 156" />
+          </g>
+        </svg>
+      </div>
       <div class="container hero__inner">
         <p class="hero__eyebrow" data-i18n="hero.eyebrow">U.S. Army Combat Veteran · Neurointelligent-Systems Architect</p>
         <h1 class="hero__title" id="hero-title">
@@ -73,6 +99,7 @@
         <div class="hero__actions">
           <a href="#contact" class="btn btn--primary" data-i18n="hero.cta.contact">Get in touch</a>
           <a href="#portfolio" class="btn btn--ghost" data-i18n="hero.cta.work">View my work</a>
+          <button type="button" class="btn btn--ghost" data-print data-i18n="hero.cta.print">Print résumé</button>
         </div>
         <dl class="hero__meta">
           <div>
@@ -91,29 +118,11 @@
       </div>
     </section>
 
-    <!-- SCHEDULE -->
-    <section id="schedule" class="section" aria-labelledby="schedule-title">
-      <div class="container">
-        <header class="section__head">
-          <p class="section__kicker" data-i18n="schedule.kicker">Schedule</p>
-          <h2 class="section__title" id="schedule-title" data-i18n="schedule.title">Upcoming appearances.</h2>
-        </header>
-        <ul role="list" class="schedule-list">
-          <li class="schedule-list__item schedule-list__item--cancelled">
-            <p class="schedule-list__status" data-i18n="schedule.olympia.status">Cancelled</p>
-            <h3 class="schedule-list__title"><s data-i18n="schedule.olympia.title">Mr. Olympia Pro 2026</s></h3>
-            <p class="schedule-list__date" data-i18n="schedule.olympia.date">2026 competition season</p>
-            <p class="schedule-list__note" data-i18n="schedule.olympia.note">Off the table. A hamstring injury has me in roughly three months of rehab — I'll be back on stage once I'm fully healed. Full update in this week's video.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
     <!-- ABOUT -->
     <section id="about" class="section" aria-labelledby="about-title">
       <div class="container about">
         <header class="section__head">
-          <p class="section__kicker" data-i18n="about.kicker">About</p>
+          <p class="section__kicker"><span class="section__num">01</span> <span data-i18n="about.kicker">About</span></p>
           <h2 class="section__title" id="about-title" data-i18n="about.title">Engineering with ethics, under constraint.</h2>
         </header>
         <div class="about__body">
@@ -135,27 +144,39 @@
       </div>
     </section>
 
-    <!-- MISSION -->
-    <section id="mission" class="section section--offset" aria-labelledby="mission-title">
+    <!-- CAREER -->
+    <section id="career" class="section section--offset" aria-labelledby="career-title">
       <div class="container">
         <header class="section__head">
-          <p class="section__kicker" data-i18n="mission.kicker">Mission</p>
-          <h2 class="section__title" id="mission-title" data-i18n="mission.title">Protect, strengthen, and restore.</h2>
+          <p class="section__kicker"><span class="section__num">02</span> <span data-i18n="career.kicker">Career</span></p>
+          <h2 class="section__title" id="career-title" data-i18n="career.title">From service to systems.</h2>
         </header>
-        <ul role="list" class="mission-list">
-          <li class="mission-list__item">
-            <h3 data-i18n="mission.item1.h">Protect disabled veterans</h3>
-            <p data-i18n="mission.item1.p">Build technology that defends the people who served, with accessibility and dignity at the core.</p>
+        <ol role="list" class="timeline">
+          <li class="timeline__item">
+            <p class="timeline__period" data-i18n="career.army.period">U.S. Army</p>
+            <div>
+              <h3 class="timeline__role" data-i18n="career.army.role">Combat Veteran</h3>
+              <p class="timeline__org" data-i18n="career.army.org">United States Army</p>
+              <p class="timeline__desc" data-i18n="career.army.desc">Leadership and decision-making under high-stakes, high-pressure conditions. The discipline, systems thinking, and duty-of-care ethos that now anchor every system I architect.</p>
+            </div>
           </li>
-          <li class="mission-list__item">
-            <h3 data-i18n="mission.item2.h">Strengthen working families</h3>
-            <p data-i18n="mission.item2.p">Create durable, replicable systems that support the communities most often excluded from advanced technology.</p>
+          <li class="timeline__item">
+            <p class="timeline__period" data-i18n="career.sheriff.period">Public service</p>
+            <div>
+              <h3 class="timeline__role" data-i18n="career.sheriff.role">Deputy Sheriff</h3>
+              <p class="timeline__org" data-i18n="career.sheriff.org">County Sheriff's Office</p>
+              <p class="timeline__desc" data-i18n="career.sheriff.desc">Civilian law enforcement grounded in community trust, accountability, and operational rigor — the foundation of my commitment to verifiable ethical boundaries in technology.</p>
+            </div>
           </li>
-          <li class="mission-list__item">
-            <h3 data-i18n="mission.item3.h">Restore technological sovereignty</h3>
-            <p data-i18n="mission.item3.p">Return control to communities through auditable, offline-capable, constraint-aligned engineering.</p>
+          <li class="timeline__item">
+            <p class="timeline__period" data-i18n="career.current.period">Present</p>
+            <div>
+              <h3 class="timeline__role" data-i18n="career.current.role">Neurointelligent-Systems Architect</h3>
+              <p class="timeline__org" data-i18n="career.current.org">Independent · Defense & Governance</p>
+              <p class="timeline__desc" data-i18n="career.current.desc">Designing sovereign, offline-autonomous systems — including the patented Ayala neurointelligent claims-preparation engine — for defense, governance, and disability-justice applications.</p>
+            </div>
           </li>
-        </ul>
+        </ol>
       </div>
     </section>
 
@@ -163,12 +184,13 @@
     <section id="portfolio" class="section" aria-labelledby="portfolio-title">
       <div class="container">
         <header class="section__head">
-          <p class="section__kicker" data-i18n="portfolio.kicker">Engineering Portfolio</p>
+          <p class="section__kicker"><span class="section__num">03</span> <span data-i18n="portfolio.kicker">Engineering Portfolio</span></p>
           <h2 class="section__title" id="portfolio-title" data-i18n="portfolio.title">Systems built to endure.</h2>
         </header>
 
         <div class="projects">
           <article class="project">
+            <span class="project__badge" aria-hidden="true">Patented</span>
             <h3 class="project__title">Ayala</h3>
             <p class="project__tag" data-i18n="portfolio.ayala.tag">Patented neurointelligent claims-preparation engine</p>
             <p class="project__desc" data-i18n="portfolio.ayala.desc">
@@ -214,11 +236,35 @@
       </div>
     </section>
 
-    <!-- PRINCIPLES -->
-    <section id="principles" class="section section--offset" aria-labelledby="principles-title">
+    <!-- MISSION -->
+    <section id="mission" class="section section--offset" aria-labelledby="mission-title">
       <div class="container">
         <header class="section__head">
-          <p class="section__kicker" data-i18n="principles.kicker">Principles</p>
+          <p class="section__kicker"><span class="section__num">04</span> <span data-i18n="mission.kicker">Mission</span></p>
+          <h2 class="section__title" id="mission-title" data-i18n="mission.title">Protect, strengthen, and restore.</h2>
+        </header>
+        <ul role="list" class="mission-list">
+          <li class="mission-list__item">
+            <h3 data-i18n="mission.item1.h">Protect disabled veterans</h3>
+            <p data-i18n="mission.item1.p">Build technology that defends the people who served, with accessibility and dignity at the core.</p>
+          </li>
+          <li class="mission-list__item">
+            <h3 data-i18n="mission.item2.h">Strengthen working families</h3>
+            <p data-i18n="mission.item2.p">Create durable, replicable systems that support the communities most often excluded from advanced technology.</p>
+          </li>
+          <li class="mission-list__item">
+            <h3 data-i18n="mission.item3.h">Restore technological sovereignty</h3>
+            <p data-i18n="mission.item3.p">Return control to communities through auditable, offline-capable, constraint-aligned engineering.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PRINCIPLES -->
+    <section id="principles" class="section" aria-labelledby="principles-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker"><span class="section__num">05</span> <span data-i18n="principles.kicker">Principles</span></p>
           <h2 class="section__title" id="principles-title" data-i18n="principles.title">What every build is measured against.</h2>
         </header>
 
@@ -263,10 +309,61 @@
       </div>
     </section>
 
+    <!-- CREDENTIALS -->
+    <section id="credentials" class="section section--offset" aria-labelledby="credentials-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker"><span class="section__num">06</span> <span data-i18n="credentials.kicker">Credentials</span></p>
+          <h2 class="section__title" id="credentials-title" data-i18n="credentials.title">Recognized work & service.</h2>
+        </header>
+        <ul role="list" class="creds">
+          <li class="creds__item">
+            <span class="creds__mark" aria-hidden="true">◆</span>
+            <div>
+              <h3 class="creds__title" data-i18n="credentials.patent.h">U.S. Patent — Ayala</h3>
+              <p class="creds__desc" data-i18n="credentials.patent.d">Neurointelligent claims-preparation engine; granted patent protecting the underlying method.</p>
+            </div>
+          </li>
+          <li class="creds__item">
+            <span class="creds__mark" aria-hidden="true">★</span>
+            <div>
+              <h3 class="creds__title" data-i18n="credentials.service.h">U.S. Army — Combat Veteran</h3>
+              <p class="creds__desc" data-i18n="credentials.service.d">Honorable military service with combat deployment; leadership under fire.</p>
+            </div>
+          </li>
+          <li class="creds__item">
+            <span class="creds__mark" aria-hidden="true">⌖</span>
+            <div>
+              <h3 class="creds__title" data-i18n="credentials.sheriff.h">Deputy Sheriff — Civilian Service</h3>
+              <p class="creds__desc" data-i18n="credentials.sheriff.d">Sworn law-enforcement service; community trust, accountability, and operational discipline.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section id="schedule" class="section" aria-labelledby="schedule-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker"><span class="section__num">07</span> <span data-i18n="schedule.kicker">Schedule</span></p>
+          <h2 class="section__title" id="schedule-title" data-i18n="schedule.title">Upcoming appearances.</h2>
+        </header>
+        <ul role="list" class="schedule-list">
+          <li class="schedule-list__item schedule-list__item--cancelled">
+            <p class="schedule-list__status" data-i18n="schedule.olympia.status">Cancelled</p>
+            <h3 class="schedule-list__title"><s data-i18n="schedule.olympia.title">Mr. Olympia Pro 2026</s></h3>
+            <p class="schedule-list__date" data-i18n="schedule.olympia.date">2026 competition season</p>
+            <p class="schedule-list__note" data-i18n="schedule.olympia.note">Off the table. A hamstring injury has me in roughly three months of rehab — I'll be back on stage once I'm fully healed. Full update in this week's video.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <!-- CONTACT -->
     <section id="contact" class="section section--cta" aria-labelledby="contact-title">
       <div class="container contact">
-        <p class="section__kicker" data-i18n="contact.kicker">Contact</p>
+        <p class="section__kicker"><span class="section__num">08</span> <span data-i18n="contact.kicker">Contact</span></p>
         <h2 class="contact__title" id="contact-title" data-i18n="contact.title">Let's build something durable.</h2>
         <p class="contact__lede" data-i18n="contact.lede">
           Open to defense, governance, and disability-justice collaborations. The most accessible
@@ -281,6 +378,10 @@
             <span class="contact__icon" aria-hidden="true">⌥</span>
             <span>github.com/connectors-testing-pplx</span>
           </a>
+          <button type="button" class="contact__link" data-print>
+            <span class="contact__icon" aria-hidden="true">⎙</span>
+            <span data-i18n="contact.print">Print / save this résumé</span>
+          </button>
         </div>
         <p class="contact__a11y-note" data-i18n="contact.a11y">
           This site is designed to be fully usable with a screen reader and keyboard only.
