@@ -2,7 +2,6 @@
 (function () {
   var root = document.documentElement;
   var toggle = document.querySelector('[data-theme-toggle]');
-  var stored = 'light';
   var sysDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   var theme = sysDark ? 'dark' : 'light';
   root.setAttribute('data-theme', theme);
@@ -57,12 +56,87 @@
   els.forEach(function (el) { io.observe(el); });
 })();
 
-// Print buttons (hero + contact) — open the browser print dialog
-(function () {
-  document.querySelectorAll('[data-print]').forEach(function (btn) {
-    btn.addEventListener('click', function () { window.print(); });
-  });
-})();
-
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// ===== Data-driven project renderer =====
+// Reads window.PROJECTS (see js/projects.js) and builds a card for each entry.
+// Re-renders when the language changes so bilingual text stays in sync.
+(function () {
+  var grid = document.querySelector('[data-projects]');
+  if (!grid) return;
+
+  function pickLang() {
+    return document.documentElement.getAttribute('data-lang') || 'en';
+  }
+
+  function el(tag, cls, text) {
+    var node = document.createElement(tag);
+    if (cls) node.className = cls;
+    if (text != null) node.textContent = text;
+    return node;
+  }
+
+  function localized(val, lang) {
+    // Support both { en, es } objects and plain strings.
+    if (val && typeof val === 'object') return val[lang] || val.en || '';
+    return val || '';
+  }
+
+  function i18n(key, lang) {
+    var dict = (window.__aa_i18n && window.__aa_i18n.strings) ? window.__aa_i18n.strings[lang] : null;
+    return dict ? dict[key] : null;
+  }
+
+  function buildCard(project, lang) {
+    var card = el('article', 'project project--' + (project.type || 'skript'));
+
+    // Category chip + optional featured badge in a header row.
+    var head = el('div', 'project__head');
+    var chip = el('span', 'project__chip', i18n('project.type.' + project.type, lang) || project.type);
+    head.appendChild(chip);
+    if (project.badge) {
+      head.appendChild(el('span', 'project__badge', localized(project.badge, lang)));
+    }
+    card.appendChild(head);
+
+    card.appendChild(el('h3', 'project__title', localized(project.title, lang)));
+    card.appendChild(el('p', 'project__tag', localized(project.tag, lang)));
+    card.appendChild(el('p', 'project__desc', localized(project.desc, lang)));
+
+    // Tech tags
+    if (Array.isArray(project.tags) && project.tags.length) {
+      var tags = el('ul', 'tags');
+      tags.setAttribute('role', 'list');
+      project.tags.forEach(function (t) { tags.appendChild(el('li', null, t)); });
+      card.appendChild(tags);
+    }
+
+    // Links
+    if (Array.isArray(project.links) && project.links.length) {
+      var links = el('div', 'project__links');
+      project.links.forEach(function (link) {
+        var a = el('a', 'project__link', link.label);
+        a.href = link.url;
+        a.setAttribute('target', '_blank');
+        a.setAttribute('rel', 'noopener noreferrer');
+        links.appendChild(a);
+      });
+      card.appendChild(links);
+    }
+
+    return card;
+  }
+
+  function render() {
+    var projects = window.PROJECTS || [];
+    var lang = pickLang();
+    grid.innerHTML = '';
+    projects.forEach(function (project) {
+      grid.appendChild(buildCard(project, lang));
+    });
+  }
+
+  render();
+  document.addEventListener('langchange', render);
+})();
